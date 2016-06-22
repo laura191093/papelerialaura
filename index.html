@@ -20,7 +20,7 @@ $(document).ready(function inicio(){
   var pre=parseInt($("#precio").val());
     $.ajax({
     type:"POST",
-    url:"http://laura1910933.260mb.net/GuardarArticulo.php",
+    url:"http://aplicacionftp.260mb.net/GuardarArticulo.php",
     data:"nombre="+nom+"&marca="+mar+"&modelo="+mod+"&descripcion="+des+"&precio="+pre,
     success: registro
     });
@@ -34,7 +34,7 @@ $(document).ready(function inicio(){
   btnConsulta.click(function cons(){  
     $.ajax({
     type:"POST",
-    url:"http://laura1910933.260mb.net/consultatotal.php",
+    url:"http://aplicacionftp.260mb.net/consultatotal.php",
     data:"",
     success: consultaDatos
     });
@@ -67,7 +67,7 @@ $(document).ready(function inicio(){
   var valConsulta=$("#valConsulta").val();
     $.ajax({
       type:"POST",
-      url:"http://laura1910933.260mb.net/consultauno.php",
+      url:"http://aplicacionftp.260mb.net/consultauno.php",
       data:"Id="+valConsulta,
       success: consultaArticulo
     });
@@ -83,7 +83,7 @@ $(document).ready(function inicio(){
   btnConsAct.click(function cargarDat(){
     $.ajax({
     type:"POST",
-    url:"http://laura1910933.260mb.net/consultatotal.php",
+    url:"http://aplicacionftp.260mb.net/consultatotal.php",
     data:"",
     success: cargarDatos
     });
@@ -99,7 +99,7 @@ $(document).ready(function inicio(){
   var Id=parseInt($("#nomActualizar").val());
   $.ajax({
       type:"POST",
-      url:"http://laura1910933.260mb.net/consultauno.php",
+      url:"http://aplicacionftp.260mb.net/consultauno.php",
       data:"Id="+Id,
       success:cargarDatosAct
   });
@@ -144,7 +144,7 @@ $(document).ready(function inicio(){
      else{
          $.ajax({
              type:"POST",
-             url:"http://laura1910933.260mb.net/actualizar.php",
+             url:"http://aplicacionftp.260mb.net/actualizar.php",
              data:"id="+id+"&nombre="+nombre+"&marca="+marca+"&modelo="+modelo+"&descripcion="+descripcion+"&precio="+precio,
              success:actualizacion
          });
@@ -158,7 +158,7 @@ $(document).ready(function inicio(){
   btnConsEliminar.click(function conEliminar(){
       $.ajax({
         type:"POST",
-        url:"http://laura1910933.260mb.net/consultatotal.php",
+        url:"http://aplicacionftp.260mb.net/consultatotal.php",
         data:"",
         success:consultaAntEliminar
       });
@@ -173,7 +173,7 @@ $(document).ready(function inicio(){
     var   idEliminar=parseInt($("#idEliminar").val());
     $.ajax({
         type:"POST",
-        url:"http://laura1910933.260mb.net/eliminar.php",
+        url:"http://aplicacionftp.260mb.net/eliminar.php",
         data:"Id="+idEliminar,
         success:Eliminacion
     });
